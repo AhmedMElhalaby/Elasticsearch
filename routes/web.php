@@ -14,3 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('files/search', 'FileController@search');
+Route::get('files/add', 'FileController@search');

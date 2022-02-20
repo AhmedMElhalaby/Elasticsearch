@@ -24,6 +24,20 @@
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
+                <form action="{{url('files/add')}}">
+
+                    <label>
+                        Name
+                        <input type="text" name="name" required class="form-control" placeholder="">
+                    </label>
+                    <br>
+                    <label>
+                        Description
+                        <input type="text" name="description" required class="form-control" placeholder="">
+                    </label>
+                    <br>
+                    <button class="btn btn-primary">Save</button>
+                </form>
                 @foreach($Files as $file)
                     <p>{{$file->name}}<br>{{$file->description}}</p>
                 @endforeach

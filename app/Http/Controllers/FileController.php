@@ -19,4 +19,11 @@ class FileController extends Controller
         }
         return view('welcome',compact('Files'));
     }
+    public function addFile(Request $request){
+        $File = new File();
+        $File->name = $request->name;
+        $File->description = $request->description;
+        $File->save();
+        return redirect()->back();
+    }
 }
