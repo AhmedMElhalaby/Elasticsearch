@@ -10,6 +10,7 @@ class File extends Model
 {
     use HasFactory;
     use Searchable;
+    protected $fillable = ['name','description'];
     public function toSearchableArray()
     {
         return [
